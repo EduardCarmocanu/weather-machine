@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather machine</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div id="root">
+		<div class="application-info-wrapper" :style="{ backgroundImage: 'url(' + background + ')' }">
+			<div class="application-info">
+				<div class="restrictor">
+					<h2>{{ weather.location.city + ", " + weather.location.country }}</h2>
+					<div class="temperature-info">
+						<div class="temperature-info-value" @click="switchTempSystem">
+							<h1>{{ weather.temperature.value }} &deg;{{ weather.temperature.system}}</h1>
+						</div>
+					</div>
+					<br>
+					<h4>{{ weather.description.detailed }}</h4>
+					<br>
+					<h6>Last updated at {{ time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()}}</h6>
+					<br>
+					<br>
+					<hr>
+					<div class="additional-info-wrapper">
+						<div class="additional-info wind-speed"><h4>Wind Speed: {{ weather.wind }}km/h</h4></div>
+						<div class="additional-info visibility"><h4>Visibility: {{ weather.visibility }}%</h4></div>
+						<div class="additional-info humidity"><h4>Humidity: {{ weather.humidity }}%</h4></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vue@2.3.4"></script>
+	<script src="./main.js"></script>
+</body>
+</html>

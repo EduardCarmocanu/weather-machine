@@ -1,0 +1,64 @@
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	overflow: hidden;
+	font-family: 'Cabin', sans-serif;
+}
+h1 {
+	font-size: 6em;
+}
+button {
+	padding: 15px;
+	margin: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: transform 0.2s ease-out;
+}
+button:hover {
+	transform: scale(0.9, 0.9);
+}
+.inactive:hover {
+	opacity: 0.6;
+}
+
+.application-info-wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}
+.application-info {
+	width: 100%;
+	text-align: center;
+	/*margin-top: 30vh;*/
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+}
+.restrictor {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 30vh;
+
+}
+
+.temperature-info {
+	display: inline-flex;
+	cursor: pointer;
+}
+
+
+.additional-info-wrapper {
+	display: inline-flex;
+}
+.additional-info {
+	padding: 20px;
+}
